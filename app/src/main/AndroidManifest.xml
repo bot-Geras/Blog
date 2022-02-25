@@ -13,18 +13,20 @@
         android:theme="@style/Theme.Blog">
         <activity
             android:name=".BlogActivities.LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".BlogActivities.HomeActivity"
-            android:exported="true" />
-        <activity
-            android:name=".BlogActivities.RegisterActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".BlogActivities.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BlogActivities.RegisterActivity"
+            android:exported="true">
+
         </activity>
     </application>
 

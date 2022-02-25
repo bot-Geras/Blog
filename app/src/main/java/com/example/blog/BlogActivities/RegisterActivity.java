@@ -7,6 +7,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -41,6 +42,8 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText userEmail, userPassword, userPassword2, userName;
     private ProgressBar loadingProgress;
     private Button regBtn;
+
+    private Intent loginActivity;
 
     private FirebaseAuth mAuth;
 
@@ -77,7 +80,6 @@ public class RegisterActivity extends AppCompatActivity {
                     regBtn.setVisibility(View.VISIBLE);
                     loadingProgress.setVisibility(View.VISIBLE);
 
-
                 } else {
                     //we can start creating an account
                     // Create user Account method will try to create the user if the email is valid
@@ -92,41 +94,35 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         imgUserPhoto = findViewById(R.id.regUserPhoto);
-        imgUserPhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (Build.VERSION.SDK_INT >= 22) {
-                    checkAndRequestForPermission();
-                } else {
-                    openGallery();
-                }
-
-
+        imgUserPhoto.setOnClickListener(view -> {
+            if (Build.VERSION.SDK_INT >= 22) {
+                checkAndRequestForPermission();
+            } else {
+                openGallery();
             }
+
+
         });
     }
 
     private void CreateUserAccount(String e, String n, String pd) {
 
         mAuth.createUserWithEmailAndPassword(e, pd)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
 
-                            // user Acc is created successfully
-                            showMessage("Account created");
-                            // after we created user account we need to update his profile pictures and name
-                            updateUserInfo(n, pickedImgUri, mAuth.getCurrentUser());
+                        // user Acc is created successfully
+                        showMessage("Account created");
+                        // after we created user account we need to update his profile pictures and name
+                        updateUserInfo(n, pickedImgUri, mAuth.getCurrentUser());
 
 
-                        } else {
-                            // account creation is failed
-                            showMessage("account creation failed" + task.getException().getMessage());
-                            regBtn.setVisibility(View.VISIBLE);
-                            loadingProgress.setVisibility(View.INVISIBLE);
+                    } else {
+                        // account creation is failed
+                        showMessage("account creation failed" + task.getException().getMessage());
+                        regBtn.setVisibility(View.VISIBLE);
+                        loadingProgress.setVisibility(View.INVISIBLE);
 
-                        }
                     }
                 });
 
@@ -146,30 +142,24 @@ public class RegisterActivity extends AppCompatActivity {
                 // image uploaded successfully
                 // now we can get our image uri
 
-                imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                    @Override
-                    public void onSuccess(Uri uri) {
+                imageFilePath.getDownloadUrl().addOnSuccessListener(uri -> {
 
-                        // uri contain user image uri
-                        UserProfileChangeRequest profileUpdate = new UserProfileChangeRequest.Builder()
-                                .setDisplayName(n)
-                                .setPhotoUri(uri)
-                                .build();
+                    // uri contain user image uri
+                    UserProfileChangeRequest profileUpdate = new UserProfileChangeRequest.Builder()
+                            .setDisplayName(n)
+                            .setPhotoUri(uri)
+                            .build();
 
-                        currentUser.updateProfile(profileUpdate)
-                                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
-                                        if (task.isSuccessful()) {
-                                            // user info updated successfully
-                                            showMessage("Register complete");
-                                            updateUI();
-                                        }
-                                    }
-                                });
+                    currentUser.updateProfile(profileUpdate)
+                            .addOnCompleteListener(task -> {
+                                if (task.isSuccessful()) {
+                                    // user info updated successfully
+                                    showMessage("Register complete");
+                                    updateUI();
+                                }
+                            });
 
 
-                    }
                 });
 
             }
@@ -179,8 +169,8 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void updateUI() {
-        Intent homeActivity = new Intent(getApplicationContext(), HomeActivity.class);
-        startActivity(homeActivity);
+        Intent loginActivity = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(loginActivity);
         finish();
 
     }

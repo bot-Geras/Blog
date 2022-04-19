@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Blog">
         <activity
+            android:name=".BlogActivities.Activity.Home"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.Blog.NoActionBar" />
+        <activity
             android:name=".BlogActivities.LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -25,9 +30,7 @@
             android:exported="true" />
         <activity
             android:name=".BlogActivities.RegisterActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

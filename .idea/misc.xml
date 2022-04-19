@@ -3,10 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/circle_bg.xml" value="0.1815" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/popup_edittext_style.xml" value="0.1815" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/reg_btn_style.xml" value="0.1953125" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/reg_edittext_style.xml" value="0.1953125" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_home.xml" value="0.209375" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_home2.xml" value="0.209375" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/app_bar_home.xml" value="0.209375" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/content_home.xml" value="0.209375" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/fragment_gallery.xml" value="0.209375" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/fragment_home.xml" value="0.209375" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/fragment_logout.xml" value="0.209375" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/fragment_slideshow.xml" value="0.209375" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/nav_header_home.xml" value="0.209375" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/popup_add_post.xml" value="0.25" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/settings_fragment.xml" value="0.209375" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/menu/home.xml" value="0.209375" />
         <entry key="..\:/Users/brian/Desktop/Android Projects/Blog/app/src/main/res/drawable/reg_btn_style.xml" value="0.2" />
         <entry key="..\:/Users/brian/Desktop/Android Projects/Blog/app/src/main/res/drawable/reg_edittext_style.xml" value="0.2" />
         <entry key="..\:/Users/brian/Desktop/Android Projects/Blog/app/src/main/res/layout/activity_home.xml" value="0.18385416666666668" />

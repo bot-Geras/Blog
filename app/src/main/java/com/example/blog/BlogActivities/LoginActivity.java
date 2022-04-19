@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.blog.BlogActivities.Activity.Home;
 import com.example.blog.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -42,18 +43,15 @@ public class LoginActivity extends AppCompatActivity {
         loginProgress = findViewById(R.id.loginProgressBar);
         loginPhoto = findViewById(R.id.loginUserPhoto);
 
-        loginPhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent registerActivity = new Intent(getApplicationContext(), RegisterActivity.class);
-                startActivity(registerActivity);
-                finish();
-            }
+        loginPhoto.setOnClickListener(v -> {
+            Intent registerActivity = new Intent(getApplicationContext(), RegisterActivity.class);
+            startActivity(registerActivity);
+            finish();
         });
 
         mAuth = FirebaseAuth.getInstance();
 
-        homeActivity = new Intent(getApplicationContext(),HomeActivity.class);
+        homeActivity = new Intent(getApplicationContext(), Home.class);
 
         loginProgress.setVisibility(View.INVISIBLE);
         btnLogin.setOnClickListener(v -> {
@@ -68,25 +66,22 @@ public class LoginActivity extends AppCompatActivity {
                 btnLogin.setVisibility(View.VISIBLE);
                 loginProgress.setVisibility(View.INVISIBLE);
             } else {
-                signIn(mail,password);
+                signIn(mail, password);
             }
 
         });
     }
 
     private void signIn(String mail, String password) {
-        mAuth.signInWithEmailAndPassword(mail,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    loginProgress.setVisibility(View.INVISIBLE);
-                    btnLogin.setVisibility(View.VISIBLE);
-                    updateUI();
-                } else {
-                    showMessage(task.getException().getMessage());
-                    btnLogin.setVisibility(View.VISIBLE);
-                    loginProgress.setVisibility(View.INVISIBLE);
-                }
+        mAuth.signInWithEmailAndPassword(mail, password).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                loginProgress.setVisibility(View.INVISIBLE);
+                btnLogin.setVisibility(View.VISIBLE);
+                updateUI();
+            } else {
+                showMessage(task.getException().getMessage());
+                btnLogin.setVisibility(View.VISIBLE);
+                loginProgress.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -99,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void showMessage(String text) {
-        Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
     }
 
     @Override

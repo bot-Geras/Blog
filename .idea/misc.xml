@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/black_gradient.xml" value="0.1815" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/circle_bg.xml" value="0.1815" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/popup_edittext_style.xml" value="0.1815" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/reg_btn_style.xml" value="0.1953125" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/reg_edittext_style.xml" value="0.1953125" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/side_nav_bar.xml" value="0.1815" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_home.xml" value="0.209375" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_home2.xml" value="0.209375" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_login.xml" value="0.25" />
@@ -19,6 +21,7 @@
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/fragment_slideshow.xml" value="0.209375" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/nav_header_home.xml" value="0.209375" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/popup_add_post.xml" value="0.25" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/row_post_item.xml" value="0.20516304347826086" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/settings_fragment.xml" value="0.209375" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/menu/home.xml" value="0.209375" />

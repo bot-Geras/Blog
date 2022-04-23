@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/black_gradient.xml" value="0.1815" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/circle_bg.xml" value="0.1815" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/editext_button_style_rounded.xml" value="0.1815" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/edittext_button.xml" value="0.1815" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/popup_edittext_style.xml" value="0.1815" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/reg_btn_style.xml" value="0.1953125" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/drawable/reg_edittext_style.xml" value="0.1953125" />
@@ -12,6 +14,7 @@
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_home.xml" value="0.209375" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_home2.xml" value="0.209375" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_post_detail.xml" value="0.25" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/app_bar_home.xml" value="0.209375" />
         <entry key="..\:/Users/Whitemimir/Documents/GitHub/Blog/app/src/main/res/layout/content_home.xml" value="0.209375" />
